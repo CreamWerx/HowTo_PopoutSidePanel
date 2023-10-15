@@ -28,34 +28,49 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(0, 573);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 576);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
-            this.MouseEnter += new System.EventHandler(this.Form1_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
-            this.ResumeLayout(false);
-
+        panel1 = new Panel();
+        button1 = new Button();
+        panel1.SuspendLayout();
+        SuspendLayout();
+        // 
+        // panel1
+        // 
+        panel1.BackColor = SystemColors.WindowFrame;
+        panel1.Controls.Add(button1);
+        panel1.Location = new Point(0, 0);
+        panel1.Name = "panel1";
+        panel1.Size = new Size(200, 592);
+        panel1.TabIndex = 0;
+        panel1.MouseLeave += panel1_MouseLeave;
+        // 
+        // button1
+        // 
+        button1.Location = new Point(32, 35);
+        button1.Name = "button1";
+        button1.Size = new Size(127, 37);
+        button1.TabIndex = 0;
+        button1.Text = "button1";
+        button1.UseVisualStyleBackColor = true;
+        button1.Click += button1_Click;
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new SizeF(13F, 31F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(867, 595);
+        Controls.Add(panel1);
+        Name = "Form1";
+        Text = "Form1";
+        SizeChanged += Form1_SizeChanged;
+        MouseEnter += Form1_MouseEnter;
+        MouseLeave += Form1_MouseLeave;
+        MouseMove += Form1_MouseMove;
+        panel1.ResumeLayout(false);
+        ResumeLayout(false);
     }
 
     #endregion
 
     private Panel panel1;
+    private Button button1;
 }
